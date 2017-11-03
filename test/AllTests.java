@@ -8,6 +8,7 @@ public class AllTests extends TestCase {
 		TestSuite suite = new TestSuite("Test for default package");
 		//$JUnit-BEGIN$
 		suite.addTestSuite(DummyTest.class);
+		suite.addTestSuite(MainTest.class);
 //		suite.addTestSuite(SalesEmployeeTest.class);
 		//$JUnit-END$
 		return suite;
