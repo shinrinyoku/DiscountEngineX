@@ -9,7 +9,7 @@ public class AllTests extends TestCase {
 		//$JUnit-BEGIN$
 		suite.addTestSuite(DummyTest.class);
 		suite.addTestSuite(MainTest.class);
-//		suite.addTestSuite(SalesEmployeeTest.class);
+		suite.addTestSuite(MultiItemDiscountEngineTest.class);
 		//$JUnit-END$
 		return suite;
 	}
