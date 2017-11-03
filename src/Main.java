@@ -16,7 +16,7 @@ public class Main {
 				input = scanner. nextLine();
 				main.addItemViaString(input);
 				System.out.println("------------------------------------");;
-				
+				main.displayAllItem();
 			}
 		}
 	}
@@ -32,11 +32,12 @@ public class Main {
 	
 	public void displayAllItem(){
 		ProductCatalogue  catalogue = new ProductCatalogue();
+		MultiItemDiscountEngine engine = new MultiItemDiscountEngine();
+		DiscountedItem discountedItems [] = engine.calculateDiscounts(itemArray);
 		System.out.println("Receipt:=======================");
 		for(int i = 0 ; i < itemArray.length; i++ )
 		{
-			
-			System.out.println(itemArray[i]+":"+catalogue);
+			System.out.println(itemArray[i]+"|"+catalogue.getPrice(itemArray[i])+"|"+discountedItems[i].getFinalPrice()+"|"+discountedItems[i].getDiscount()+"%");
 		}
 		System.out.println("=======================");
 		
