@@ -37,7 +37,9 @@ public class Main {
 		System.out.println("Receipt:=======================");
 		for(int i = 0 ; i < itemArray.length; i++ )
 		{
-			System.out.println(itemArray[i]+"|"+catalogue.getPrice(itemArray[i])+"|"+discountedItems[i].getFinalPrice()+"|"+discountedItems[i].getDiscount()+"%");
+			float finalPrice  =(float)(catalogue.getPrice(itemArray[i])* (100 - discountedItems[i].getDiscount()) /100.0);
+			
+			System.out.println(itemArray[i]+"|"+catalogue.getPrice(itemArray[i])+"|"+finalPrice+"|"+discountedItems[i].getDiscount()+"%");
 		}
 		System.out.println("=======================");
 		
